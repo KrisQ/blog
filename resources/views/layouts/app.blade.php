@@ -45,6 +45,9 @@
                     <!-- Expanded navigation -->
                     <ul class="right hide-on-med-and-down">
                         <li>
+                          <a class="waves-effect" href="/admin" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                              Admin
+                          </a>
                             <a class="waves-effect" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 Logout
                             </a>
