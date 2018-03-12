@@ -29,7 +29,7 @@
                 <!-- Dropdown Button -->
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                 <!-- Navigation Branding -->
-                <a id="logo-container" href="{{ url('/') }}" class="brand-logo">Bitch</a>
+                <a id="logo-container" href="{{ url('/') }}" class="brand-logo">Laravel</a>
                 @guest
                     <!-- Expanded navigation -->
                     <ul class="right hide-on-med-and-down">

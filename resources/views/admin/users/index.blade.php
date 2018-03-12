@@ -22,7 +22,11 @@
           <td>{{$user->id}}</td>
           <td>{{$user->name}}</td>
           <td>{{$user->email}}</td>
-          <td>{{$user->role->name}}</td>
+          @if ($user->role == '')
+            <td>No role</td>
+          @else
+            <td>{{$user->role->name}}</td>
+          @endif
           <td>{{$user->is_active == 1 ? 'Active' : 'Innactive'}}</td>
           <td>{{$user->created_at->diffForHumans()}}</td>
           <td>{{$user->updated_at->diffForHumans()}}</td>
