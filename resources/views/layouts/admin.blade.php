@@ -70,21 +70,21 @@
                         <div class="collapsible-body">
                           <ul>
                             <li>
-                              <a href="/admin/users">
+                              <a href="{{route('users.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>All</span>
+                                <span>All Users</span>
                               </a>
                             </li>
                             <li>
-                              <a href="/admin/users/create">
+                              <a href="{{route('users.create')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>Create</span>
+                                <span>Create User</span>
                               </a>
                             </li>
                             <li>
                               <a href="/admin/users/update">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>Edit</span>
+                                <span>Edit Users</span>
                               </a>
                             </li>
                           </ul>

@@ -32,7 +32,7 @@
         {!! Form::label('role_id', 'Role:') !!}
       </div>
       <div class="input-field col s4">
-        {!! Form::file('file') !!}
+        {!! Form::file('photo_id',null) !!}
       </div>
   </div>
   {!! Form::submit('Create User', ['class'=>'waves-effect waves-light btn']) !!}
