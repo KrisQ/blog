@@ -24,7 +24,7 @@
         </style>
     </head>
     <body>
-        <nav class="amber darken-4" role="navigation">
+        <nav class="light-blue darken-3" role="navigation">
             <div class="nav-wrapper container">
                 <!-- Dropdown Button -->
                 <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -45,7 +45,7 @@
                     <!-- Expanded navigation -->
                     <ul class="right hide-on-med-and-down">
                         <li>
-                          <a class="waves-effect" href="/admin" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                          <a class="waves-effect" href="/admin">
                               Admin
                           </a>
                             <a class="waves-effect" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
@@ -74,7 +74,7 @@
         <main>
             @yield('content')
         </main>
-        <footer class="page-footer amber darken-4">
+        <footer class="page-footer light-blue darken-3">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -96,7 +96,7 @@
             </div>
             <div class="footer-copyright">
                 <div class="container">
-                    <span class="white-text">Template made by <a class="red-text text-lighten-4" href="http://Roderik-Rasterhoff.nl">Roderik Rasterhoff</a></span>
+                    <span class="white-text">Template made by <a class="green-text text-lighten-4" href="http://Roderik-Rasterhoff.nl">Roderik Rasterhoff</a></span>
                 </div>
             </div>
         </footer>

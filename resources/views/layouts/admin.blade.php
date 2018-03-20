@@ -1,3 +1,7 @@
+@php
+  use Illuminate\Support\Facades\Auth;
+  $user = Auth::user();
+@endphp
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
     <head>
@@ -23,18 +27,27 @@
             }
         </style>
     </head>
-    <body>
+    <body class="light-blue lighten-3">
       <aside id="left-sidebar-nav">
-                <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y" style="transform: translateX(0px);">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation ps-container ps-active-y light-blue lighten-1" style="transform: translateX(0px);">
                   <li>
-                    <img style="max-width: 100%;" src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bbe0bd1ecfaaa91394e0c9effb8b0415&auto=format&fit=crop&w=2850&q=80" alt="">
                     <ul class="collapsible" data-collapsible="accordion">
                       <li class="bold">
-                        <a class="collapsible-header waves-effect waves-cyan">
-                          <i class="material-icons">person</i>
-                          <span class="nav-text">You</span>
+                      </div>
+                        <a class="waves-effect waves-cyan collapsible-header">
+                          @if ($user)
+                              <div class="chip light-blue lighten-3">
+                                  {{-- <img src="https://images.unsplash.com/photo-1496134732667-ae8d2853a045?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e4dd1c9106a69065ccfa21a36cfb53b1&auto=format&fit=crop&w=2850&q=80" alt="Contact Person"> --}}
+                                  {{$user->name}}
+                              </div>
+                          @else
+                              <div class="chip light-blue lighten-3">
+                                Welcome
+                              </div>
+
+                          @endif
                         </a>
-                        <div class="collapsible-body">
+                        <div class="collapsible-body light-blue lighten-4">
                           <ul>
                             <li>
                               <a href="user-profile-page.html">
@@ -48,12 +61,17 @@
                                 <span>Login</span>
                               </a>
                             </li>
+                            <li>
+                              <a href="/home">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Home</span>
+                              </a>
+                            </li>
                           </ul>
                         </div>
                       </li>
                     </ul>
                   </li>
-                  <hr>
                   <li class="no-padding">
                     <ul class="collapsible" data-collapsible="accordion">
                       <li class="bold">
@@ -67,7 +85,7 @@
                           <i class="material-icons">account_circle</i>
                           <span class="nav-text">Users</span>
                         </a>
-                        <div class="collapsible-body">
+                        <div class="collapsible-body light-blue lighten-4">
                           <ul>
                             <li>
                               <a href="{{route('users.index')}}">
@@ -81,12 +99,12 @@
                                 <span>Create User</span>
                               </a>
                             </li>
-                            <li>
-                              <a href="/admin/users/update">
+                            {{-- <li>
+                              <a href="{{route('users.edit')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
                                 <span>Edit Users</span>
                               </a>
-                            </li>
+                            </li> --}}
                           </ul>
                         </div>
                       </li>
@@ -95,7 +113,7 @@
                           <i class="material-icons">edit</i>
                           <span class="nav-text">Posts</span>
                         </a>
-                        <div class="collapsible-body">
+                        <div class="collapsible-body light-blue lighten-4">
                           <ul>
                             <li>
                               <a href="user-profile-page.html">
@@ -117,7 +135,7 @@
                           <i class="material-icons">format_list_bulleted</i>
                           <span class="nav-text">Categories</span>
                         </a>
-                        <div class="collapsible-body">
+                        <div class="collapsible-body light-blue lighten-4">
                           <ul>
                             <li>
                               <a href="user-profile-page.html">
