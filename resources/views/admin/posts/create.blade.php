@@ -15,7 +15,7 @@
         </div>
 
         <div class='input-field col s6'>
-          {!! Form::select('category_id', [1 => 'option', 0 => 'option' ], null) !!}
+          {!! Form::select('category_id', $categories, null) !!}
           {!! Form::label('category_id', 'Category:') !!}
         </div>
       </div>
