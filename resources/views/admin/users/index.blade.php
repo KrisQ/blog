@@ -2,7 +2,16 @@
 
 @section('content')
   <h4>Users</h4>
-  <hr>
+
+  @if (Session::has('deleted_user'))
+    <div id="card-alert" class="card green">
+      <div class="card-content white-text">
+        <p><i class="mdi-navigation-check"></i> SUCCESS : {{session('deleted_user')}}</p>
+      </div>
+    </div>
+  @endif
+<div class="card">
+  <div class="card-content">
   <table class="responsive-table highlight bordered">
   <thead>
     <tr>
@@ -51,4 +60,8 @@
     @endif
   </tbody>
 </table>
+
+  </div>
+
+</div>
 @endsection

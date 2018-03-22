@@ -5,8 +5,9 @@
 @include('includes.errors')
 
   <h4>Create User</h4>
-  <hr>
-  <br>
+  <div class="card">
+    <div class="card-content">
+
   {!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true])!!}
   <div class="row">
      <div class="input-field col s4">
@@ -37,5 +38,8 @@
   </div>
   {!! Form::submit('Create User', ['class'=>'waves-effect waves-light btn']) !!}
   {!! Form::close() !!}
+</div>
+
+</div>
 
 @endsection
