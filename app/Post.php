@@ -19,10 +19,10 @@ class Post extends Model
     }
 
     public function photo(){
-      return $this->hasOne('App\Photo');
+      return $this->belongsTo('App\Photo');
     }
 
-    public function photo(){
-      return $this->hasOne('App\Category');
+    public function category(){
+      return $this->belongsTo('App\Category');
     }
 }
