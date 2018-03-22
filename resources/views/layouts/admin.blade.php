@@ -116,15 +116,15 @@
                         <div class="collapsible-body light-blue lighten-4">
                           <ul>
                             <li>
-                              <a href="user-profile-page.html">
+                              <a href="{{route('posts.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>User Profile</span>
+                                <span>All posts</span>
                               </a>
                             </li>
                             <li>
-                              <a href="user-login.html">
+                              <a href="{{route('posts.create')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>Login</span>
+                                <span>Create</span>
                               </a>
                             </li>
                           </ul>
