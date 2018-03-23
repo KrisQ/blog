@@ -4,6 +4,14 @@
   <h4>Posts</h4>
 <div class="card">
   <div class="card-content">
+    @if (Session::has('deleted_post'))
+      <div id="card-alert" class="card green">
+        <div class="card-content white-text">
+          <p><i class="mdi-navigation-check"></i> SUCCESS : {{session('deleted_post')}}</p>
+        </div>
+      </div>
+    @endif
+
     <table>
       <thead>
         <tr>
@@ -14,6 +22,7 @@
           <th>Body</th>
           <th>Created</th>
           <th>updated</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -40,7 +49,8 @@
               @endif
               <td>{{$post->body}}</td>
               <td>{{$post->created_at->diffForHumans()}}</td>
-              <td>{{$post->updated}}</td>
+              <td>{{$post->updated_at->diffForHumans()}}</td>
+              <td><a href="{{route('posts.edit', $post->id)}}">Edit</a></td>
             </tr>
           @endforeach
         @endif

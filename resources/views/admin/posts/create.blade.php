@@ -40,7 +40,7 @@
 
         <br><br>
 
-        {!! Form::submit('Value', ['class'=>'waves-effect waves-light btn  orange darken-4']) !!}
+        {!! Form::submit('Create', ['class'=>'waves-effect waves-light btn  orange darken-4']) !!}
 
       {!! Form::close() !!}
     </div>

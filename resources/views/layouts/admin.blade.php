@@ -25,6 +25,83 @@
             main {
                 flex: 1 0 auto;
             }
+            /* label color */
+             .input-field label {
+               color: #3949ab;
+             }
+             /* label focus color */
+             .input-field input[type=text]:focus + label {
+               color: #3949ab;
+             }
+             /* label underline focus color */
+             .input-field input[type=text]:focus {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab !important;
+             }
+             /* valid color */
+             .input-field input[type=text].valid {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab;
+             }
+             /* invalid color */
+             .input-field input[type=text].invalid {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab;
+             }
+
+             /* label focus color */
+             .input-field select:focus + label {
+               color: #3949ab;
+             }
+             /* label underline focus color */
+             .input-field select:focus {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab !important;
+             }
+             /* valid color */
+             .input-field select.valid {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab;
+             }
+             /* invalid color */
+             .input-field select.invalid {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab;
+             }
+             /* icon prefix focus color */
+             .input-field .prefix.active {
+               color: #3949ab !important;
+             }
+
+             /* label focus color */
+             .input-field textarea:focus + label {
+               color: #3949ab;
+             }
+             /* label underline focus color */
+             .input-field textarea:focus {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab !important;
+             }
+             /* valid color */
+             .input-field textarea.valid {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab;
+             }
+             /* invalid color */
+             .input-field textarea.invalid {
+               border-bottom: 1px solid #3949ab;
+               box-shadow: 0 1px 0 0 #3949ab;
+             }
+             /* icon prefix focus color */
+             .input-field .prefix.active {
+               color: #3949ab !important;
+             }
+
+             ul.dropdown-content.select-dropdown li span {
+                  color: #3949ab; /* no need for !important :) */
+              }
+
+
         </style>
     </head>
     <body class="light-blue lighten-3">
@@ -138,15 +215,15 @@
                         <div class="collapsible-body light-blue lighten-4">
                           <ul>
                             <li>
-                              <a href="user-profile-page.html">
+                              <a href="{{route('categories.index')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>User Profile</span>
+                                <span>All Categories</span>
                               </a>
                             </li>
                             <li>
-                              <a href="user-login.html">
+                              <a href="{{route('categories.create')}}">
                                 <i class="material-icons">keyboard_arrow_right</i>
-                                <span>Login</span>
+                                <span>Create</span>
                               </a>
                             </li>
                           </ul>
