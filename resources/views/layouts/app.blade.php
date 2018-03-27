@@ -45,6 +45,13 @@
                     <!-- Expanded navigation -->
                     <ul class="right hide-on-med-and-down">
                         <li>
+                          <a class="waves-effect" href="/">
+                              Home
+                          </a>
+                          <a class="waves-effect" href="/posts">
+                              Posts
+                          </a>
+
                           <a class="waves-effect" href="/admin">
                               Admin
                           </a>

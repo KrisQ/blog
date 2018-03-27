@@ -41,9 +41,10 @@
         <br><br>
 
         {!! Form::submit('Edit', ['class'=>'waves-effect waves-light btn  green darken-2']) !!}
-        {!! Form::open(['method'=>'DELETE', 'action'=>['AdminPostsController@destroy', $post->id]])!!}
-          {!! Form::submit('Delete Post', ['class'=>'waves-effect waves-light btn red col 4 right']) !!}
-        {!! Form::close() !!}
+
+      {!! Form::close() !!}
+      {!! Form::open(['method'=>'DELETE', 'action'=>['AdminPostsController@destroy', $post->id]])!!}
+        {!! Form::submit('Delete Post', ['class'=>'waves-effect waves-light btn red col 4 right']) !!}
       {!! Form::close() !!}
 
     </div>

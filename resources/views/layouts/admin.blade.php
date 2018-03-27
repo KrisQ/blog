@@ -204,6 +204,12 @@
                                 <span>Create</span>
                               </a>
                             </li>
+                            <li>
+                              <a href="{{route('comments.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Comments</span>
+                              </a>
+                            </li>
                           </ul>
                         </div>
                       </li>
@@ -226,6 +232,28 @@
                                 <span>Create</span>
                               </a>
                             </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="bold">
+                        <a class="collapsible-header waves-effect waves-cyan">
+                          <i class="material-icons">photo</i>
+                          <span class="nav-text">Medias</span>
+                        </a>
+                        <div class="collapsible-body light-blue lighten-4">
+                          <ul>
+                            <li>
+                              <a href="{{route('medias.index')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>All Medias</span>
+                              </a>
+                            </li>
+                            {{-- <li>
+                              <a href="{{route('medias.create')}}">
+                                <i class="material-icons">keyboard_arrow_right</i>
+                                <span>Upload</span>
+                              </a>
+                            </li> --}}
                           </ul>
                         </div>
                       </li>
